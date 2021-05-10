@@ -8,7 +8,7 @@ pub(crate) fn cycle<const MODULUS: usize>() -> Cycle<Range<usize>> {
     (0..MODULUS).into_iter().cycle()
 }
 
-// Returns a cyclic iterator over 0, MODULUS -1, MODULUS -2, ...., 1 
+// Returns a cyclic iterator over 0, MODULUS -1, MODULUS -2, ...., 1
 pub(crate) fn rev_cycle<const MODULUS: usize>() -> Cycle<Rev<Chain<Range<usize>, Once<usize>>>> {
     (1..MODULUS)
         .into_iter()
